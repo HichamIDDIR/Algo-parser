@@ -1,0 +1,140 @@
+{
+  "boucle pour": {
+    "prefix": "pour",
+    "body": [
+      "POUR ${1:i} = ${2:0} A ${3:10} PAS ${4:1} ALORS",
+      "\t$0",
+      "FIN"
+    ],
+    "description": "Une boucle 'pour'"
+  },
+  "declaration si": {
+    "prefix": "si",
+    "body": [
+      "SI ${1:condition} ALORS",
+      "\t$0",
+      "FIN"
+    ],
+    "description": "Une déclaration 'si'"
+  },
+  "declaration si-sinon": {
+    "prefix": "si-sinon",
+    "body": [
+      "SI ${1:condition} ALORS",
+      "\t${2:}",
+      "SINON",
+      "\t${3:}",
+      "FIN"
+    ],
+    "description": "Une déclaration 'si/sinon'"
+  },
+  "boucle tantque": {
+    "prefix": "tantque",
+    "body": [
+      "TANTQUE ${1:condition} ALORS",
+      "\t$0",
+      "FIN"
+    ],
+    "description": "Une boucle 'tantque'"
+  },
+  "definition fonction": {
+    "prefix": "fonction",
+    "body": [
+      "FONCTION ${1:nom}(${2:args})",
+      "\t$0",
+      "FIN"
+    ],
+    "description": "Une définition de fonction"
+  },
+  "ecrire": {
+    "prefix": "ecrire",
+    "body": [
+      "ecrire(${1:valeur})"
+    ],
+    "description": "Affiche une valeur"
+  },
+  "entree": {
+    "prefix": "entree",
+    "body": [
+      "ENTREE()"
+    ],
+    "description": "Lit une chaîne de caractères depuis l'entrée standard"
+  },
+  "entree entier": {
+    "prefix": "entree_entier",
+    "body": [
+      "ENTREE_ENTIER()"
+    ],
+    "description": "Lit un entier depuis l'entrée standard"
+  },
+  "effacer": {
+    "prefix": "effacer",
+    "body": [
+      "EFFACER()"
+    ],
+    "description": "Efface la console"
+  },
+  "est entier": {
+    "prefix": "est_entier",
+    "body": [
+      "EST_ENTIER(${1:valeur})"
+    ],
+    "description": "Vérifie si une valeur est un entier"
+  },
+  "est chaine": {
+    "prefix": "est_chaine",
+    "body": [
+      "EST_CHAINE(${1:valeur})"
+    ],
+    "description": "Vérifie si une valeur est une chaîne de caractères"
+  },
+  "est liste": {
+    "prefix": "est_liste",
+    "body": [
+      "EST_LISTE(${1:valeur})"
+    ],
+    "description": "Vérifie si une valeur est une liste"
+  },
+  "est fonction": {
+    "prefix": "est_fonction",
+    "body": [
+      "EST_FONCTION(${1:valeur})"
+    ],
+    "description": "Vérifie si une valeur est une fonction"
+  },
+  "ajouter": {
+    "prefix": "ajouter",
+    "body": [
+      "AJOUTER(${1:liste}, ${2:valeur})"
+    ],
+    "description": "Ajoute un élément à une liste"
+  },
+  "enlever": {
+    "prefix": "enlever",
+    "body": [
+      "ENLEVER(${1:liste}, ${2:index})"
+    ],
+    "description": "Enlève un élément d'une liste par son index"
+  },
+  "etendre": {
+    "prefix": "etendre",
+    "body": [
+      "ETENDRE(${1:listeA}, ${2:listeB})"
+    ],
+    "description": "Étend une liste avec les éléments d'une autre liste"
+  },
+  "longueur": {
+    "prefix": "longueur",
+    "body": [
+      "LONGUEUR(${1:liste})"
+    ],
+    "description": "Retourne la longueur d'une liste"
+  },
+  "lancer": {
+    "prefix": "lancer",
+    "body": [
+      "LANCER(${1:\"nom_fichier\"})"
+    ],
+    "description": "Exécute un fichier Algo"
+  }
+}

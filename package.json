@@ -1,0 +1,49 @@
+{
+  "name": "algo-language-features",
+  "displayName": "Algo Language Features",
+  "description": "Une extension pour le langage symbolique 'Algo', enseigné à l'université de Bejaia et à Alger. Cet analyseur syntaxique traduit le code Algo en Python. Python est requis pour l'exécution. Utilisez Ctrl+D pour exécuter le fichier.",
+  "version": "1.0.0",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onCommand:algo.runFile",
+    "onLanguage:algo"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "algo",
+      "aliases": ["Algo", "algo"],
+      "extensions": [".algo"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "algo",
+      "scopeName": "source.algo",
+      "path": "./syntaxes/algo.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "algo",
+      "path": "./snippets.json"
+    }],
+    "commands": [
+      {
+        "command": "algo.runFile",
+        "title": "Run Algo File"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "algo.runFile",
+        "key": "ctrl+d",
+        "mac": "cmd+s",
+        "when": "editorLangId == algo"
+      }
+    ]
+  }
+}

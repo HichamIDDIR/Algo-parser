@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Algo",
+  "scopeName": "source.algo",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#functions"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.algo",
+          "match": "#.*"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.algo",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.algo",
+              "match": "\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.algo",
+          "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.algo",
+          "match": "\\b(SI|ALORS|SINON|POUR|A|PAS|FIN|TANTQUE|RETOURNE)\\b"
+        },
+        {
+          "name": "keyword.declaration.algo",
+          "match": "\\b(VAR|FONCTION)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.algo",
+          "match": "<-|="
+        },
+        {
+          "name": "keyword.operator.arithmetic.algo",
+          "match": "\\+|\\-|,|/"
+        },
+        {
+          "name": "keyword.operator.comparison.algo",
+          "match": "==|!=|<|>|<=|>="
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "support.function.algo",
+          "match": "\\b(ecrire|CHAINE)\\b"
+        }
+      ]
+    }
+  }
+}

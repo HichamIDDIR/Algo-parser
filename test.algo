@@ -1,0 +1,41 @@
+# Programme de démonstration
+
+VAR separateur = "===================="
+
+# Définition d'une fonction pour calculer le factoriel
+FONCTION factoriel(n)
+    SI n == 0 ALORS
+        RETOURNE 1
+    SINON
+        RETOURNE n * factoriel(n - 1)
+    FIN
+FIN
+
+# Boucle POUR de 1 à 5
+POUR i = 1 A 6 PAS 1 ALORS
+    ecrire(separateur)
+    VAR fact <- factoriel(i)
+    ecrire("Le factoriel de " + CHAINE(i) + " est " + CHAINE(fact))
+
+    # Vérifier si le nombre est pair ou impair
+    SI i % 2 == 0 ALORS
+        ecrire(CHAINE(i) + " est un nombre pair.")
+    SINON
+        ecrire(CHAINE(i) + " est un nombre impair.")
+    FIN
+FIN
+ecrire(separateur)
+# Démonstration des listes
+VAR ma_liste = [1, "deux", 3, "quatre"]
+ecrire("Ma liste : " + CHAINE(ma_liste))
+ma_liste <- ma_liste + 5
+ecrire("Ma liste après ajout de 5 : " + CHAINE(ma_liste))
+
+ecrire(separateur)
+
+# Démonstration de la boucle TANTQUE
+VAR compteur = 0
+TANTQUE compteur < 3 ALORS
+    ecrire("Compteur : " + CHAINE(compteur))
+    compteur <- compteur + 1
+FIN
